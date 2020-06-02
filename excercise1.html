@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My first Vue app</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="exercise">
+        <!-- 1) Fill the <p> below with your Name and Age - using Interpolation -->
+        <p>VueJS is pretty cool - {{ name }} ({{ age }})</p>
+        <!-- 2) Output your age, multiplied by 3 -->
+        <p> {{ increaseAge() }} </p>
+        <!-- 3) Call a function to output a random float between 0 and 1 (Math.random()) -->
+        <p> Random Number {{ randomNumber() }}</p>
+        <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
+        <div>
+            <img style="width:100px;height:100px" v-bind:src="imageSrc">
+        </div>
+        <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
+        <div>
+            <input type="text" value="">
+        </div>
+    </div>
+    <!-- <div id="app">
+        <input type="text" v-on:input="changeTitle">
+        <p v-once>{{ title }}</p>
+        <p>{{ sayHello() }} - <a v-bind:href="link">google</a></p>
+        <p v-html="finishedLink"></p>
+    </div> -->
+
+    <script>
+        var app = new Vue({
+            el: '#exercise',
+            data: {
+                name: "Nelson Ovidio Ajquijay Reyes",
+                age: 34,
+                imageSrc: 'https://pbs.twimg.com/media/DDFccmJXYAAguJP.jpg'
+            }, methods: {
+               increaseAge: function (){
+                   return this.age * 3;
+               },
+               randomNumber: function(){
+                    //return Math.floor(Math.random() * 10);
+                   return Math.random();
+               }
+            }
+        })
+    </script>
+</body>
+
+</html>
+
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
