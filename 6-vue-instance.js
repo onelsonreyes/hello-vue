@@ -25,6 +25,8 @@ var vm1 = new Vue({
   }
 });
 
+console.log(vm1);
+
 setTimeout(function() {
   vm1.title = 'changed by timer';
 });
